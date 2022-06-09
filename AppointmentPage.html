@@ -49,28 +49,28 @@
             <div class="row" style="text-align: center;">
                 <div class="col">
                     <h6>Select Day</h6>
-                    <input type="date" >
+                    <input type="date" id="date">
                     <br><br>
                     <h6>Select Start Time</h6>
-                    <input type="time">
+                    <input type="time" id="time">
                 </div>
                 <div class="col">
                     <h6>Name</h6>
-                    <input>
+                    <input id="name">
                     <br><br>
                     <h6>Email</h6>
-                    <input>
+                    <input id="email">
                 </div>
                 <div class="col">
                     <h6>Service</h6>                            
-                    <select>
+                    <select id="service">
                         <option></option>
                         <option>Service 1</option>
                         <option>Service 2</option>
                         <option>Service 3</option>
                     </select>
                     <h6>Expert</h6>
-                    <select>
+                    <select id="expert">
                         <option></option>
                         <option>Expert 1</option>
                         <option>Expert 2</option>
@@ -79,10 +79,16 @@
                 </div>
             </div>
             <br><br><br>
-
+            
             <!-- Button trigger modal -->
             <div style="text-align: center;">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                onclick="document.getElementById('nameText').innerHTML = document.getElementById('name').value;
+                        document.getElementById('emailText').innerHTML = document.getElementById('email').value;
+                        document.getElementById('expertText').innerHTML = document.getElementById('expert').value;
+                        document.getElementById('serviceText').innerHTML = document.getElementById('service').value;
+                        document.getElementById('timeText').innerHTML = document.getElementById('time').value;
+                        document.getElementById('dateText').innerHTML = document.getElementById('date').value;">
                     Submit
                 </button>
             </div>
@@ -96,9 +102,12 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p>insert Name here</p>
-                            <p>insert Service here</p>
-                            <p>insert Date here</p>
+                            <p style="display: inline">Thank you </p><p id="nameText" style="display: inline"></p><br>
+                            <p style="display: inline;">Confirmation has been sent to </p><p id="emailText" style="display: inline;"></p><br>
+                            <p style="display: inline;">Your appointment with </p><p style="display: inline;" id="expertText"></p>
+                            <p style="display: inline;"> for </p><p style="display: inline;" id="serviceText"></p><br>
+                            <p style="display: inline;">At </p><p style="display: inline;" id="timeText"></p>
+                            <p style="display: inline;"> on </p><p style="display: inline;" id="dateText"></p><br>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -157,4 +166,5 @@
             </div>
         </nav>
     </body>
+    
 </html>
