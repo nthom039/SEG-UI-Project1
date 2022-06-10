@@ -34,7 +34,7 @@
                         </li>
                         <!--Link to appointment page-->
                         <li class="nav-item">
-                            <a class="nav-link" href="AppointmentPage.html" style="color: white;">Appointment</a>
+                            <a class="nav-link" href="AppointmentPage.html" style="color: white;"><strong>Appointment</strong></a>
                         </li>
                         <!--Link to contact page-->
                         <li class="nav-item">
@@ -68,17 +68,19 @@
                     <h6>Service</h6>                            
                     <select id="service">
                         <option></option>
-                        <option>Service 1</option>
-                        <option>Service 2</option>
-                        <option>Service 3</option>
+                        <option>Sale</option>
+                        <option>Repair</option>
+                        <option>Tune Up</option>
                     </select>
                     <br><br>
                     <h6>Expert</h6>
                     <select id="expert">
                         <option></option>
-                        <option>Expert 1</option>
-                        <option>Expert 2</option>
-                        <option>Expert 3</option>
+                        <option>Fin Shepard</option>
+                        <option>Peppermint Patty</option>
+                        <option>Egon Spengler</option>
+                        <option>Ellen Ripley</option>
+                        <option>Thomas Anderson</option>
                     </select>
                 </div>
             </div>
@@ -102,10 +104,10 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Appointment Book</h5>
+                            <h5 class="modal-title text-black" id="exampleModalLabel">Confirmation</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body text-black">
                             <p style="display: inline">Thank you </p><p id="nameText" style="display: inline"></p><br>
                             <p style="display: inline;">Confirmation has been sent to </p><p id="emailText" style="display: inline;"></p><br>
                             <p style="display: inline;">Your appointment with </p><p style="display: inline;" id="expertText"></p>
@@ -114,7 +116,7 @@
                             <p style="display: inline;"> on </p><p style="display: inline;" id="dateText"></p><br>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
